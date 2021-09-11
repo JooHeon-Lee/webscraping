@@ -10,3 +10,4 @@ soup = BeautifulSoup(res.text, "lxml")
 
 items = soup.find_all("li", attrs={"class":re.compile("^search-product")})
 print(items[0].find("div", attrs={"class" : "name"}).get_text())
+print(items[0].find("a", attrs={"class" : "name"}).get_text())
